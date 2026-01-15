@@ -1,27 +1,81 @@
-/* 기본 리셋 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 전체 레이아웃 */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
-  background-color: #ffffff;
-  color: #111111;
-  min-height: 100vh;
+  background: #ffffff;
+  color: #111;
+  height: 100vh;
+  overflow: hidden;
+}
 
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
 }
 
-/* 메인 타이틀 */
-h1 {
-  font-size: 3rem;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+}
+
+.branches {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.branch {
+  position: relative;
+  text-decoration: none;
+  color: #111;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.branch .label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.branch .desc {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.branch:hover {
+  transform: translateY(-6px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.cursor-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(0, 0, 0, 0.06),
+    transparent 40%
+  );
+  transition: background 0.1s ease;
 }
