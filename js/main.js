@@ -1,9 +1,9 @@
-// 페이지 로드 후 살짝 페이드 인 효과
-window.addEventListener("DOMContentLoaded", () => {
-  document.body.style.opacity = "0";
+const layer = document.querySelector(".cursor-layer");
 
-  requestAnimationFrame(() => {
-    document.body.style.transition = "opacity 0.6s ease";
-    document.body.style.opacity = "1";
-  });
+window.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth) * 100;
+  const y = (e.clientY / window.innerHeight) * 100;
+
+  layer.style.setProperty("--x", `${x}%`);
+  layer.style.setProperty("--y", `${y}%`);
 });
