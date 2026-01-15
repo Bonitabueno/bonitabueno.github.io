@@ -1,0 +1,11 @@
+.scanlines {
+  background-size: 100% 4px;
+}
+
+.cursor-block {
+  box-shadow: 0 0 10px rgba(0, 95, 115, 0.4);
+}
+
+.bg-noise {
+  filter: contrast(120%) brightness(100%);
+}
