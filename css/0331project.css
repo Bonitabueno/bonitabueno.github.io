@@ -1,0 +1,7 @@
+.bg-noise {
+  filter: contrast(120%) brightness(100%);
+}
+
+.soft-shadow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
