@@ -71,19 +71,22 @@
           <p class="font-mono text-terminal-dim/70 text-sm mb-3 ml-1">
             &gt; echo $CURRENT_STATUS
           </p>
-          
+
           <div class="flex items-center flex-nowrap">
             <div
+              id="typewrap"
               class="relative overflow-hidden whitespace-nowrap w-0 animate-typewriter"
             >
               <h1
+                id="typetext"
                 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-terminal-text font-mono leading-tight"
               >
                 Building by Vibe...
               </h1>
 
               <span
-                class="absolute right-0 top-0 inline-block w-4 h-10 md:h-16 bg-terminal-accent animate-blink cursor-block rounded-[1px]"
+                id="cursor"
+                class="absolute top-0 inline-block w-4 h-10 md:h-16 bg-terminal-accent animate-blink cursor-block rounded-[1px]"
               ></span>
           </div>
         </div>
