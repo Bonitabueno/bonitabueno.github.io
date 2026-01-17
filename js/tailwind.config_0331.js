@@ -10,6 +10,7 @@ tailwind.config = {
         "ocean-blue": "#1e3a8a",
         "terracotta": "#c25e40",
         "terracotta-fade": "rgba(194, 94, 64, 0.08)",
+        "neon-green": "#39FF14",
       },
       fontFamily: {
         display: ["Space Grotesk", "sans-serif"],
