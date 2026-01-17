@@ -37,46 +37,44 @@ async function loadProjects() {
     projects.forEach(project => {
       const color = statusColors[project.status] || statusColors['Active'];
 
-      const colDiv = document.createElement('div');
-      colDiv.className = 'lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6';
-
       // 아이콘 처리: URL이 있으면 <img>, 없으면 디폴트 span
       const iconHtml = project.icon
         ? `<img src="${project.icon}" alt="${project.title}" class="w-6 h-6 object-contain" />`
         : `<span class="material-symbols-outlined">terminal</span>`;
 
-      colDiv.innerHTML = `
-        <article class="${commonBgColor} rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-terracotta/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+      const article = document.createElement('article');
+      article.className = `${commonBgColor} rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden`;
 
-          <div class="flex justify-between items-start mb-6 relative z-10">
-            <div class="w-12 h-12 rounded-xl bg-terracotta-fade flex items-center justify-center text-terracotta group-hover:scale-110 transition-transform duration-300">
-              ${iconHtml}
-            </div>
+      article.innerHTML = `
+        <div class="absolute top-0 right-0 w-32 h-32 bg-terracotta/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
 
-            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full ${color.bg} border border-green-100">
-              <div class="w-1.5 h-1.5 rounded-full ${color.dot} ${color.shadow}"></div>
-              <span class="text-[10px] font-mono font-bold ${color.text} uppercase tracking-wide">
-                ${project.status}
-              </span>
-            </div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-terracotta-fade flex items-center justify-center text-terracotta group-hover:scale-110 transition-transform duration-300">
+            ${iconHtml}
           </div>
 
-          <h3 class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors">
-            ${project.title}
-          </h3>
-          <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
-            ${project.description}
-          </p>
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full ${color.bg} border border-green-100">
+            <div class="w-1.5 h-1.5 rounded-full ${color.dot} ${color.shadow}"></div>
+            <span class="text-[10px] font-mono font-bold ${color.text} uppercase tracking-wide">
+              ${project.status}
+            </span>
+          </div>
+        </div>
 
-          <button class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20">
-            VISIT SITE
-            <span class="material-symbols-outlined text-sm">arrow_outward</span>
-          </button>
-        </article>
+        <h3 class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors">
+          ${project.title}
+        </h3>
+        <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
+          ${project.description}
+        </p>
+
+        <button class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20">
+          VISIT SITE
+          <span class="material-symbols-outlined text-sm">arrow_outward</span>
+        </button>
       `;
 
-      grid.appendChild(colDiv);
+      grid.appendChild(article); // 직접 article만 추가
     });
   } catch (err) {
     console.error("프로젝트 로드 실패:", err);
