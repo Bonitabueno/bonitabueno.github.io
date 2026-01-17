@@ -1,5 +1,5 @@
 // 공통 배경 색상
-const commonBgColor = "bg-clay-surface";
+const commonBgColor = "bg-white";
 
 // 상태별 색상 매핑
 const statusColors = {
