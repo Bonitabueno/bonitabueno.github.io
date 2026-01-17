@@ -26,7 +26,7 @@ const statusColors = {
 // 프로젝트 데이터를 JSON에서 가져오기
 async function loadProjects() {
   try {
-    const res = await fetch('projects.json');
+    const res = await fetch('data/projects.json');
     const projects = await res.json();
 
     const grid = document.getElementById('projects-grid');
@@ -40,13 +40,18 @@ async function loadProjects() {
       const colDiv = document.createElement('div');
       colDiv.className = 'lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6';
 
+      // 아이콘 처리: URL이 있으면 <img>, 없으면 디폴트 span
+      const iconHtml = project.icon
+        ? `<img src="${project.icon}" alt="${project.title}" class="w-6 h-6 object-contain" />`
+        : `<span class="material-symbols-outlined">terminal</span>`;
+
       colDiv.innerHTML = `
         <article class="${commonBgColor} rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
           <div class="absolute top-0 right-0 w-32 h-32 bg-terracotta/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
 
           <div class="flex justify-between items-start mb-6 relative z-10">
             <div class="w-12 h-12 rounded-xl bg-terracotta-fade flex items-center justify-center text-terracotta group-hover:scale-110 transition-transform duration-300">
-              <span class="material-symbols-outlined">${project.icon}</span>
+              ${iconHtml}
             </div>
 
             <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full ${color.bg} border border-green-100">
