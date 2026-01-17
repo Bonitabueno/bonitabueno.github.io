@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Operations Showcase</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Tailwind config -->
+    <script src="js/tailwind.config_0331.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/0331project.css" />
+  </head>
+
+  <body
+    class="font-display bg-clay-bg text-clay-text overflow-x-hidden selection:bg-terracotta selection:text-white min-h-screen w-full relative"
+  >
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="absolute inset-0 bg-noise opacity-[0.03] mix-blend-multiply"></div>
+      <div
+        class="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-terracotta/5 rounded-full blur-[100px] animate-pulse-soft"
+      ></div>
+      <div
+        class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-ocean-blue/5 rounded-full blur-[80px] animate-pulse-soft"
+        style="animation-delay: 1s"
+      ></div>
+    </div>
+
+    <main class="relative z-10 flex flex-col h-full w-full p-6 md:p-12 max-w-7xl mx-auto">
+      <nav class="flex items-center justify-between mb-12">
+        <a
+          class="group flex items-center gap-2 font-mono text-xs font-bold text-clay-subtext hover:text-ocean-blue transition-colors duration-300"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1"
+            >arrow_back</span
+          >
+          <span>BACK_TO_INTRO</span>
+        </a>
+
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="font-mono text-xs text-clay-subtext tracking-widest"
+            >SYSTEM ONLINE</span
+          >
+        </div>
+      </nav>
+
+      <header class="mb-12 border-b border-ocean-blue/10 pb-8">
+        <h1 class="text-4xl md:text-6xl font-bold text-ocean-blue tracking-tight mb-3">
+          Live Operations
+        </h1>
+        <p
+          class="font-mono text-terracotta text-sm md:text-base opacity-90 max-w-2xl"
+        >
+          // ACTIVE DEPLOYMENTS &amp; SERVICES
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article
+            class="bg-clay-surface rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-terracotta/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"
+            ></div>
+
+            <div class="flex justify-between items-start mb-6 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-terracotta-fade flex items-center justify-center text-terracotta group-hover:scale-110 transition-transform duration-300"
+              >
+                <span class="material-symbols-outlined">edit_note</span>
+              </div>
+
+              <div
+                class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 border border-green-100"
+              >
+                <div
+                  class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.4)]"
+                ></div>
+                <span
+                  class="text-[10px] font-mono font-bold text-green-700 uppercase tracking-wide"
+                  >Active</span
+                >
+              </div>
+            </div>
+
+            <h3
+              class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors"
+            >
+              Vibe Note
+            </h3>
+
+            <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
+              Minimalist thought capture for developers. Markdown support with
+              zen-mode writing interface.
+            </p>
+
+            <button
+              class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20"
+            >
+              VISIT SITE
+              <span class="material-symbols-outlined text-sm"
+                >arrow_outward</span
+              >
+            </button>
+          </article>
+
+          <article
+            class="bg-clay-surface rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-ocean-blue/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"
+            ></div>
+
+            <div class="flex justify-between items-start mb-6 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-ocean-blue/5 flex items-center justify-center text-ocean-blue group-hover:scale-110 transition-transform duration-300"
+              >
+                <span class="material-symbols-outlined">calendar_view_day</span>
+              </div>
+
+              <div
+                class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 border border-green-100"
+              >
+                <div
+                  class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.4)]"
+                ></div>
+                <span
+                  class="text-[10px] font-mono font-bold text-green-700 uppercase tracking-wide"
+                  >Active</span
+                >
+              </div>
+            </div>
+
+            <h3
+              class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors"
+            >
+              Clay Track
+            </h3>
+
+            <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
+              Time tracking for pottery sessions and kiln firing schedules.
+              Analog soul, digital memory.
+            </p>
+
+            <button
+              class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20"
+            >
+              VISIT SITE
+              <span class="material-symbols-outlined text-sm"
+                >arrow_outward</span
+              >
+            </button>
+          </article>
+
+          <article
+            class="bg-clay-surface rounded-2xl p-6 soft-shadow border border-transparent hover:border-terracotta/20 transition-all duration-300 group flex flex-col h-full relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110"
+            ></div>
+
+            <div class="flex justify-between items-start mb-6 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 group-hover:scale-110 transition-transform duration-300"
+              >
+                <span class="material-symbols-outlined">terminal</span>
+              </div>
+
+              <div
+                class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-100"
+              >
+                <div
+                  class="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)] animate-pulse"
+                ></div>
+                <span
+                  class="text-[10px] font-mono font-bold text-amber-700 uppercase tracking-wide"
+                  >Beta</span
+                >
+              </div>
+            </div>
+
+            <h3
+              class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors"
+            >
+              Flow Shell
+            </h3>
+
+            <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
+              Custom ZSH theme configuration focusing on readability and calm
+              colors for long coding sessions.
+            </p>
+
+            <button
+              class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20"
+            >
+              VISIT SITE
+              <span class="material-symbols-outlined text-sm"
+                >arrow_outward</span
+              >
+            </button>
+          </article>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col gap-6">
+          <div
+            class="bg-clay-surface rounded-2xl p-6 soft-shadow h-full flex flex-col relative overflow-hidden border border-transparent"
+          >
+            <div class="flex items-center justify-between mb-8">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-terracotta"
+                  >monitoring</span
+                >
+                <h2
+                  class="font-mono text-xs font-bold text-ocean-blue uppercase tracking-widest"
+                >
+                  Vibe Analytics
+                </h2>
+              </div>
+
+              <div
+                class="text-[10px] font-mono text-clay-subtext bg-clay-bg px-2 py-1 rounded"
+              >
+                24H VIEW
+              </div>
+            </div>
+
+            <div class="relative h-48 w-full mb-6">
+              <svg
+                class="w-full h-full overflow-visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 100 50"
+              >
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop
+                      offset="0%"
+                      stop-color="#c25e40"
+                      stop-opacity="0.2"
+                    ></stop>
+                    <stop
+                      offset="100%"
+                      stop-color="#c25e40"
+                      stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+
+                <line
+                  x1="0"
+                  y1="10"
+                  x2="100"
+                  y2="10"
+                  stroke="rgba(0,0,0,0.03)"
+                  stroke-width="0.5"
+                  stroke-dasharray="2"
+                ></line>
+                <line
+                  x1="0"
+                  y1="30"
+                  x2="100"
+                  y2="30"
+                  stroke="rgba(0,0,0,0.03)"
+                  stroke-width="0.5"
+                  stroke-dasharray="2"
+                ></line>
+
+                <path
+                  d="M0,50 L0,35 Q15,15 30,30 T60,25 T100,10 V50 Z"
+                  fill="url(#chartGradient)"
+                ></path>
+                <path
+                  d="M0,35 Q15,15 30,30 T60,25 T100,10"
+                  fill="none"
+                  stroke="#c25e40"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="drop-shadow-sm"
+                ></path>
+
+                <circle cx="100" cy="10" r="1.5" fill="#c25e40">
+                  <animate
+                    attributeName="r"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="1.5;3;1.5"
+                  ></animate>
+                  <animate
+                    attributeName="opacity"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="1;0.5;1"
+                  ></animate>
+                </circle>
+              </svg>
+            </div>
+
+            <div class="space-y-4 font-mono text-xs mt-auto">
+              <div
+                class="flex justify-between items-center border-b border-dashed border-gray-100 pb-3"
+              >
+                <span class="text-clay-subtext">TOTAL_VISITS</span>
+                <span class="text-ocean-blue font-bold text-sm">8,420</span>
+              </div>
+
+              <div
+                class="flex justify-between items-center border-b border-dashed border-gray-100 pb-3"
+              >
+                <span class="text-clay-subtext">AVG_SESSION</span>
+                <span class="text-ocean-blue font-bold text-sm">4m 12s</span>
+              </div>
+
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-clay-subtext">CONVERSION</span>
+                <div
+                  class="flex items-center text-green-600 font-bold text-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-xs mr-1"
+                    >trending_up</span
+                  >
+                  2.4%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-ocean-blue rounded-2xl p-6 shadow-lg text-white relative overflow-hidden group"
+          >
+            <div
+              class="absolute -right-4 -top-4 text-white/5 group-hover:text-white/10 transition-colors"
+            >
+              <span class="material-symbols-outlined text-[120px]">hub</span>
+            </div>
+
+            <h3 class="font-mono text-sm font-bold mb-2 relative z-10">
+              NETWORK STATUS
+            </h3>
+            <p
+              class="text-white/70 text-xs font-mono leading-relaxed relative z-10 mb-4"
+            >
+              All nodes operational. Backend services responding within 45ms.
+            </p>
+
+            <div class="flex gap-1 relative z-10">
+              <span class="h-1 w-8 bg-green-400 rounded-full animate-pulse"></span>
+              <span class="h-1 w-1 bg-white/20 rounded-full"></span>
+              <span class="h-1 w-1 bg-white/20 rounded-full"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
