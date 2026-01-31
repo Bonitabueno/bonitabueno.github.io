@@ -26,7 +26,7 @@ const statusColors = {
 // 프로젝트 데이터를 JSON에서 가져오기
 async function loadProjects() {
   try {
-    const res = await fetch('data/projects.json');
+    const res = await fetch('https://raw.githubusercontent.com/Bonitabueno/Bonitabueno/refs/heads/main/projects.json');
     const projects = await res.json();
 
     const grid = document.getElementById('projects-grid');
