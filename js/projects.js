@@ -61,7 +61,7 @@ async function loadProjects() {
           </div>
         </div>
 
-        <h3 class="text-xl font-bold text-ocean-blue mb-2 font-mono group-hover:text-terracotta transition-colors">
+        <h3 class="text-xl font-bold text-ocean-blue mb-4 font-mono group-hover:text-terracotta transition-colors">
           ${project.title}
         </h3>
         <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
