@@ -61,17 +61,17 @@ async function loadProjects() {
           </div>
         </div>
 
-        <h3 class="text-xl font-bold text-ocean-blue mb-4 font-mono group-hover:text-terracotta transition-colors">
+        <h3 class="text-xl font-bold antialiased tracking-tight text-ocean-blue mb-4 font-mono group-hover:text-terracotta transition-colors">
           ${project.title}
         </h3>
         <p class="text-sm text-clay-subtext mb-8 leading-relaxed flex-grow">
           ${project.description}
         </p>
 
-        <button class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20">
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl border border-ocean-blue/10 text-ocean-blue font-mono text-xs font-bold hover:bg-ocean-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-ocean-blue/20">
           VISIT SITE
           <span class="material-symbols-outlined text-sm">arrow_outward</span>
-        </button>
+        </a>
       `;
 
       grid.appendChild(article); // 직접 article만 추가
