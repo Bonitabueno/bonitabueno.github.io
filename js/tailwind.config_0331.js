@@ -13,8 +13,8 @@ tailwind.config = {
         "neon-green": "#39FF14",
       },
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
-        mono: ["Space Mono", "monospace"],
+        display: ["Space Grotesk", "IBM Plex Sans KR", "sans-serif"],
+        mono: ["Space Mono", "IBM Plex Sans KR", "monospace"],
       },
       backgroundImage: {
         noise:
