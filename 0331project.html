@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>0331 Project : Product</title>
-
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -20,13 +19,10 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Tailwind config -->
     <script src="js/tailwind.config_0331.js"></script>
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/0331project.css" />
   </head>
 
@@ -59,9 +55,8 @@
 
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-          <span class="font-mono text-xs text-clay-subtext tracking-widest"
-            >SYSTEM ONLINE</span
-          >
+          <span class="font-mono text-xs text-clay-subtext tracking-widest">
+            SYSTEM ONLINE</span>
         </div>
       </nav>
 
@@ -74,10 +69,10 @@
         </p>
       </header>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- 프로젝트 카드 영역 (JS에서 동적 생성) -->
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
     </main>
+
     <script src="js/projects.js"></script>
   </body>
 </html>
