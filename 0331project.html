@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>0331 Project : Product</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config_0331.js"></script>
+    <link rel="stylesheet" href="css/0331project.css" />
+  </head>
+
+  <body
+    class="font-display bg-clay-bg text-clay-text overflow-x-hidden selection:bg-terracotta selection:text-white min-h-screen w-full relative"
+  >
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="absolute inset-0 bg-noise opacity-[0.03] mix-blend-multiply"></div>
+      <div
+        class="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-terracotta/5 rounded-full blur-[100px] animate-pulse-soft"
+      ></div>
+      <div
+        class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-ocean-blue/5 rounded-full blur-[80px] animate-pulse-soft"
+        style="animation-delay: 1s"
+      ></div>
+    </div>
+
+    <main class="relative z-10 flex flex-col h-full w-full p-6 md:p-12 max-w-7xl mx-auto">
+      <nav class="flex items-center justify-between mb-12">
+        <a
+          class="group flex items-center gap-2 font-mono text-xs font-bold text-clay-subtext hover:text-ocean-blue transition-colors duration-300"
+          href="index.html"
+        >
+          <span>Bonitabueno</span>
+        </a>
+
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="text-xs text-emerald-600 font-mono">
+            SYSTEM ONLINE</span>
+        </div>
+      </nav>
+
+      <header class="mb-12 border-b border-ocean-blue/10 pb-8">
+        <h1 class="text-4xl md:text-6xl font-bold text-black tracking-tight mb-3">
+          0331 Project
+        </h1>
+        <p class="font-mono text-green-600 text-sm md:text-base opacity-90 max-w-2xl">
+          // On March 31, 2024, Bonitabueno starts Vibe Coding.
+        </p>
+      </header>
+
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+    </main>
+
+    <script src="js/projects.js"></script>
+  </body>
+</html>

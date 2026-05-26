@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bonitabueno</title>
+    <meta property="og:title" content="Bonitabueno | VIBE_OS" />
+    <meta property="og:description" content="Bonitabueno's official Website" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bonitabueno.github.io/assets/og-image.webp" />
+    <meta property="og:url" content="https://bonitabueno.github.io/" />    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config_index.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body class="font-display bg-terminal-bg text-terminal-text w-full relative selection:bg-terminal-accent selection:text-white overflow-x-hidden min-h-screen overflow-y-auto md:h-screen md:overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="absolute inset-0 bg-noise opacity-10 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-scanlines opacity-40 pointer-events-none"></div>
+      <div class="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-clay-accent/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+
+      <div
+        class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-terminal-accent/10 rounded-full blur-[100px] animate-pulse-slow"
+        style="animation-delay: 1.5s"
+      ></div>
+
+      <div
+        class="absolute top-0 left-0 w-full h-[2px] bg-terminal-accent/20 blur-[1px] animate-scan pointer-events-none"
+      ></div>
+    </div>
+
+    <main
+      class="relative z-10 flex flex-col items-center px-6 w-full justify-start pt-16 pb-12 min-h-screen md:h-full md:justify-center md:py-0"
+    >
+      <div class="w-full max-w-5xl relative">
+        <div class="flex items-center gap-3 mb-12 opacity-80 font-mono text-xs tracking-widest text-terminal-dim">
+          <span class="material-symbols-outlined text-sm text-terminal-accent">
+            terminal
+          </span>
+          <span class="text-terminal-accent/80">
+            VIBE_OS_KERNEL // SESSION: ACTIVE
+          </span>
+          <div
+            class="h-px flex-1 bg-gradient-to-r from-terminal-accent/30 to-transparent"
+          ></div>
+        </div>
+
+        <div class="mb-8 md:mb-12 relative pl-2 md:pl-0">
+          <p class="font-mono text-terminal-dim/70 text-sm mb-3 ml-1">
+            &gt; echo $CURRENT_STATUS
+          </p>
+
+          <div class="hidden md:flex items-center flex-nowrap">
+            <div class="overflow-hidden whitespace-nowrap animate-typewriter min-h-[6.5rem] lg:min-h-[7.5rem]">
+              <h1 class="inline-flex items-center text-6xl lg:text-7xl font-bold tracking-tight text-terminal-text font-mono leading-tight">
+                Building by Vibe...
+                <span class="ml-1 inline-block w-4 h-16 bg-terminal-accent animate-blink rounded-[1px]"></span>
+              </h1>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:hidden items-start">
+            <div class="overflow-hidden whitespace-nowrap animate-typewriter w-fit">
+              <h1 class="text-4xl font-bold tracking-tight text-terminal-text font-mono leading-tight">
+                Building by
+              </h1>
+            </div>
+            <div class="overflow-hidden whitespace-nowrap animate-typewriter w-0 [animation-delay:3s] [animation-fill-mode:forwards]">
+              <h1 class="inline-flex items-center text-4xl font-bold tracking-tight text-terminal-text font-mono leading-tight">
+                Vibe...
+                <span class="ml-1 inline-block w-3 h-10 bg-terminal-accent animate-blink rounded-[1px]"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-float">
+          <a 
+            href="/0331project" 
+            class="block group bg-terminal-surface border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-xl hover:border-terminal-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300"
+          >
+            <div class="flex items-start justify-between mb-5">
+              <span class="font-mono text-[10px] text-terminal-dim uppercase tracking-widest">
+                Status
+              </span>
+              <div class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.4)]"></span>
+              </div>
+            </div>
+            <div class="text-2xl font-mono text-terminal-text mb-5 tracking-tight">
+              0331 Project
+            </div>
+          </a>
+
+          <a
+            href="https://a-palebluedot.pages.dev/"
+            class="block group bg-terminal-surface border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-xl hover:border-terminal-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden"
+          >
+            <div class="flex items-start justify-between mb-5">
+              <span class="font-mono text-[10px] text-terminal-dim uppercase tracking-widest">
+                Status
+              </span>
+              <div class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terminal-accent opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.4)]"></span>
+              </div>
+            </div>
+            <div class="text-2xl font-mono text-terminal-text mb-5 tracking-tight">
+              a.palebluedot
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <div class="hidden fixed bottom-8 right-8 z-50 group">
+      <div class="relative flex items-center justify-end">
+        <div
+          class="absolute right-0 bottom-0 pr-20 opacity-0 translate-x-8 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-hover:pointer-events-auto transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) flex flex-col items-end min-w-[240px]"
+        >
+          <div
+            class="bg-white/95 border border-clay-accent/20 backdrop-blur-xl p-5 rounded-lg shadow-[0_20px_40px_rgba(0,0,0,0.1)] mb-2 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-clay-accent/5 to-transparent pointer-events-none"
+            ></div>
+
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="material-symbols-outlined text-clay-accent text-lg"
+              >
+                local_florist
+              </span>
+              <h3
+                class="text-clay-accent font-display font-bold text-sm tracking-wide uppercase"
+              >
+                Analog Break
+              </h3>
+            </div>
+
+            <p
+              class="text-terminal-dim text-xs font-mono leading-relaxed text-right"
+            >
+              Step away from the screen.<br />
+              Shaping clay, grounding inputs.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative w-16 h-16 rounded-full bg-white border border-clay-accent/10 shadow-[0_10px_30px_rgba(217,119,87,0.2)] flex items-center justify-center overflow-hidden cursor-pointer transition-all duration-300 group-hover:scale-110 group-hover:border-clay-accent/40 group-hover:shadow-[0_10px_40px_rgba(217,119,87,0.4)]"
+        >
+          <div
+            class="absolute inset-0 bg-clay-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+
+          <span
+            class="material-symbols-outlined text-clay-accent/60 text-2xl group-hover:opacity-0 transition-all duration-300 absolute z-10 scale-100 group-hover:scale-50 group-hover:rotate-180"
+          >
+            spa
+          </span>
+
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 scale-50 group-hover:scale-100 delay-75"
+          >
+            <span
+              class="material-symbols-outlined text-clay-accent text-3xl drop-shadow-[0_0_8px_rgba(217,119,87,0.3)]"
+            >
+              gesture
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute -bottom-6 right-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"
+      >
+        <span
+          class="text-[9px] font-mono text-clay-accent/80 tracking-widest uppercase"
+        >
+          Small Joy
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
