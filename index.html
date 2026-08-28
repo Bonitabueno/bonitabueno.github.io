@@ -80,41 +80,30 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-float">
-          <a 
-            href="/0331project" 
-            class="block group bg-terminal-surface border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-xl hover:border-terminal-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300"
-          >
-            <div class="flex items-start justify-between mb-5">
-              <span class="font-mono text-[10px] text-terminal-dim uppercase tracking-widest">
-                Status
-              </span>
-              <div class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.4)]"></span>
-              </div>
-            </div>
-            <div class="text-2xl font-mono text-terminal-text mb-5 tracking-tight">
-              0331 Project
-            </div>
-          </a>
-
+        <div class="flex justify-center opacity-0 animate-enter-fade [animation-delay:6s] md:[animation-delay:3.5s]">
           <a
-            href="https://a-palebluedot.pages.dev/"
-            class="block group bg-terminal-surface border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-xl hover:border-terminal-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden"
+            href="0331project.html"
+            class="group relative inline-flex items-center gap-2.5 bg-transparent border border-terminal-dim/30 px-5 py-2 rounded-md hover:border-terminal-accent/50 hover:bg-terminal-accent/5 transition-all duration-300 overflow-hidden animate-float"
           >
-            <div class="flex items-start justify-between mb-5">
-              <span class="font-mono text-[10px] text-terminal-dim uppercase tracking-widest">
-                Status
-              </span>
-              <div class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terminal-accent opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.4)]"></span>
-              </div>
-            </div>
-            <div class="text-2xl font-mono text-terminal-text mb-5 tracking-tight">
-              a.palebluedot
-            </div>
+            <span
+              class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-terminal-accent/10 to-transparent pointer-events-none"
+            ></span>
+
+            <span class="font-mono text-terminal-accent/60 text-xs">
+              &gt;
+            </span>
+
+            <span
+              class="font-mono text-xs font-bold tracking-[0.25em] text-terminal-text group-hover:text-terminal-accent transition-colors duration-300"
+            >
+              ENTER
+            </span>
+
+            <span
+              class="material-symbols-outlined text-terminal-accent text-sm transition-transform duration-300 group-hover:translate-x-1"
+            >
+              arrow_forward
+            </span>
           </a>
         </div>
       </div>
