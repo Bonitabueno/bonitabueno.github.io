@@ -28,8 +28,13 @@ tailwind.config = {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         float: "float 6s ease-in-out infinite",
         scan: "scanline 8s linear infinite",
+        "enter-fade": "enterFade 0.8s ease-out forwards",
       },
       keyframes: {
+        enterFade: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
         typewriter: {
           "0%": { width: "0" },
           "100%": { width: "100%" },
