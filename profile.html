@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Service Health Dashboard</title>
+    <title>Bonitabueno - Profile</title>
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -113,59 +113,57 @@
         <div class="w-full max-w-5xl relative">
 
             <!-- Header Section -->
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-                <div>
-                    <a href="index.html" class="inline-flex items-center gap-2.5 mb-4 opacity-80 hover:opacity-100 font-mono text-xs tracking-widest text-terminal-dim hover:text-terminal-accent transition-all group" title="Return to Intro">
+            <div class="mb-16">
+                <!-- Top Utility Bar (Back & Language Dropdown 동일 라인) -->
+                <div class="flex items-center justify-between mb-8 md:mb-12">
+                    <a href="index.html" class="inline-flex items-center gap-2 opacity-80 hover:opacity-100 font-mono text-xs tracking-widest text-terminal-dim hover:text-terminal-accent transition-all group" title="Return to Intro">
                         <span class="material-symbols-outlined text-sm text-terminal-accent group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
-                        <span class="text-terminal-accent/80 group-hover:text-terminal-accent group-hover:underline underline-offset-4">BACK TO INTRO</span>
+                        <!-- 모바일 전용 (md 미만) -->
+                        <span class="inline md:hidden text-terminal-accent/80 group-hover:text-terminal-accent group-hover:underline underline-offset-4">BACK</span>
+                        <!-- PC 전용 (md 이상) -->
+                        <span class="hidden md:inline text-terminal-accent/80 group-hover:text-terminal-accent group-hover:underline underline-offset-4">BACK TO INTRO</span>
                     </a>
-                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-terminal-text font-mono leading-tight">
-                        Service Health
-                    </h1>
-                    <p class="font-mono text-terminal-dim/70 text-sm mt-2">
-                        &gt; Operational status across all creative subsystems.
-                    </p>
+
+                    <!-- Language Dropdown -->
+                    <div class="relative" id="lang-dropdown-wrapper">
+                        <button id="lang-menu-btn" type="button" class="group flex items-center gap-2 px-4 py-2.5 rounded-lg bg-terminal-surface border border-glass-border shadow-sm hover:shadow-md hover:border-terminal-accent/30 transition-all duration-300 focus:outline-none">
+                            <span class="material-symbols-outlined text-sm text-terminal-dim group-hover:text-terminal-accent transition-colors">language</span>
+                            <span id="current-lang-text" class="font-mono text-xs font-bold text-terminal-dim group-hover:text-terminal-accent transition-colors">한국어</span>
+                            <span class="material-symbols-outlined text-xs text-terminal-dim group-hover:text-terminal-accent transition-transform duration-200" id="lang-arrow">expand_more</span>
+                        </button>
+                        <div id="lang-menu-list" class="hidden absolute right-0 mt-2 w-36 bg-terminal-surface border border-glass-border rounded-lg shadow-lg py-1.5 z-50 backdrop-blur-sm">
+                            <button type="button" class="lang-option w-full text-left px-3.5 py-1.5 font-mono text-xs text-terminal-text hover:bg-terminal-bg hover:text-terminal-accent transition-colors flex items-center justify-between" data-lang="한국어">
+                                <span>한국어</span>
+                                <span class="material-symbols-outlined text-xs text-terminal-accent lang-check">check</span>
+                            </button>
+                            <button type="button" class="lang-option w-full text-left px-3.5 py-1.5 font-mono text-xs text-terminal-dim hover:bg-terminal-bg hover:text-terminal-accent transition-colors flex items-center justify-between" data-lang="English">
+                                <span>English</span>
+                                <span class="material-symbols-outlined text-xs text-terminal-accent lang-check hidden">check</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Language Dropdown -->
-                <div class="relative" id="lang-dropdown-wrapper">
-                    <button id="lang-menu-btn" type="button" class="group flex items-center gap-2 px-4 py-2.5 rounded-lg bg-terminal-surface border border-glass-border shadow-sm hover:shadow-md hover:border-terminal-accent/30 transition-all duration-300 focus:outline-none">
-                        <span class="material-symbols-outlined text-sm text-terminal-dim group-hover:text-terminal-accent transition-colors">language</span>
-                        <span id="current-lang-text" class="font-mono text-xs font-bold text-terminal-dim group-hover:text-terminal-accent transition-colors">한국어</span>
-                        <span class="material-symbols-outlined text-xs text-terminal-dim group-hover:text-terminal-accent transition-transform duration-200" id="lang-arrow">expand_more</span>
-                    </button>
-                    <div id="lang-menu-list" class="hidden absolute right-0 mt-2 w-36 bg-terminal-surface border border-glass-border rounded-lg shadow-lg py-1.5 z-50 backdrop-blur-sm">
-                        <button type="button" class="lang-option w-full text-left px-3.5 py-1.5 font-mono text-xs text-terminal-text hover:bg-terminal-bg hover:text-terminal-accent transition-colors flex items-center justify-between" data-lang="한국어">
-                            <span>한국어</span>
-                            <span class="material-symbols-outlined text-xs text-terminal-accent lang-check">check</span>
-                        </button>
-                        <button type="button" class="lang-option w-full text-left px-3.5 py-1.5 font-mono text-xs text-terminal-dim hover:bg-terminal-bg hover:text-terminal-accent transition-colors flex items-center justify-between" data-lang="English">
-                            <span>English</span>
-                            <span class="material-symbols-outlined text-xs text-terminal-accent lang-check hidden">check</span>
-                        </button>
-                    </div>
+                <!-- Title & Subtitle Section -->
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-terminal-text font-mono leading-tight">
+                        보니타부에노
+                    </h1>
+                    <p class="font-mono text-terminal-dim/70 text-sm mt-8">
+                        &gt; Operational status across all creative subsystems.
+                    </p>
                 </div>
             </div>
 
             <!-- Top Summary Cards (Global Status & Real-time Vibe) -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
                 <!-- Global Status Card -->
-                <div class="lg:col-span-1 bg-terminal-surface border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-2xl flex flex-col justify-between h-full min-h-[220px]">
-                    <div class="flex items-start justify-between">
-                        <span class="font-mono text-[10px] text-terminal-dim uppercase tracking-widest">Global Status</span>
-                        <div class="relative flex h-3 w-3">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.4)]"></span>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <div class="text-4xl font-mono font-bold text-terminal-text mb-2 tracking-tight">100%</div>
-                        <div class="text-sm text-terminal-dim font-mono">Uptime over last 90 days</div>
-                    </div>
-                    <div class="mt-auto pt-6 flex items-center gap-2 text-emerald-600 font-mono text-xs font-bold">
-                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                        ALL SYSTEMS OPERATIONAL
-                    </div>
+                <div class="lg:col-span-1 bg-[#F8DDA6] border border-glass-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm p-6 rounded-2xl flex flex-col justify-between h-full min-h-[220px] relative overflow-hidden">
+                    <img
+                        src="https://raw.githubusercontent.com/Bonitabueno/bonitabueno/refs/heads/main/images/Github_bonitabueno.png"
+                        alt="Bonitabueno Profile"
+                        class="absolute inset-0 w-full h-full object-contain"
+                    />
                 </div>
 
                 <!-- Traffic Patterns Card -->
